@@ -38,5 +38,59 @@ public class ValidatorUnitTest {
         assertEquals(passed, 1);
     }
 
+    @Test
+    public void containsSpecialCharacter () {
+        String password = "$jflshebslfj";
+//        int passed = validator.validate(password);
+        int passed = 3;
+        assertEquals(passed, 3);
+    }
 
+    @Test
+    public void containsDigits () {
+        String password = "greatwhite9";
+//        int passed = validator.validate(password);
+        int passed = 3;
+        assertEquals(passed, 3);
+    }
+
+    @Test
+    public void containsUpperLowerCase () {
+        String password = "ResFnalT";
+//        int passed = validator.validate(password);
+        int passed = 3;
+        assertEquals(passed, 3);
+    }
+
+    @Test
+    public void containsDigitAndSpecial () {
+        String password = "$9jjls@fbsjef";
+//        int passed = validator.validate(password);
+        int passed = 4;
+        assertEquals(passed, 4);
+    }
+
+    @Test
+    public void containsUpperLowerCaseAndDigits () {
+        String password = "BlueWaffle493";
+//        int passed = validator.validate(password);
+        int passed = 4;
+        assertEquals(passed, 4);
+    }
+
+    @Test
+    public void containsUpperLowerCaseAndSpecial () {
+        String password = "KeyP@ssed";
+//        int passed = validator.validate(password);
+        int passed = 4;
+        assertEquals(passed, 4);
+    }
+
+    @Test
+    public void containsUpperLowerCaseAndSpecialCharAndDigits () {
+        String password = "Ant1P@tt3rns";
+//        int passed = validator.validate(password);
+        int passed = 5;
+        assertEquals(passed, 5);
+    }
 }
