@@ -3,6 +3,10 @@ package com.example.dahnbalan.assignment2;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * This class is used to validate the password
+ * @author dahnbalan
+ */
 public class Validator {
 
     private String lowerCasePassword = "password";

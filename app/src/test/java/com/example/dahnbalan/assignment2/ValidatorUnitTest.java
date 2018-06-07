@@ -5,6 +5,10 @@ import org.junit.BeforeClass;
 
 import static org.junit.Assert.*;
 
+/**
+ * JUnit Tests for Validator Class
+ * @author dahnbalan
+ */
 public class ValidatorUnitTest {
     static Validator validator;
 
