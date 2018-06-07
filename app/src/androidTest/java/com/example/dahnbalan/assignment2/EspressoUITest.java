@@ -52,7 +52,7 @@ public class EspressoUITest {
 
     @Test
     public void weakPassword () {
-        onView(withId(R.id.editText)).perform(typeText("password"));
+        onView(withId(R.id.editText)).perform(typeText("la1"));
         Espresso.closeSoftKeyboard();
         onView(withId(R.id.button)).perform(click());
         onView(withId(R.id.textView)).check(matches(withText("Weak")));
@@ -60,7 +60,7 @@ public class EspressoUITest {
 
     @Test
     public void veryWeakPassword () {
-        onView(withId(R.id.editText)).perform(typeText("lam"));
+        onView(withId(R.id.editText)).perform(typeText("password"));
         Espresso.closeSoftKeyboard();
         onView(withId(R.id.button)).perform(click());
         onView(withId(R.id.textView)).check(matches(withText("Very Weak")));

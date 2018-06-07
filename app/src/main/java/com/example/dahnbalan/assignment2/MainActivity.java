@@ -24,6 +24,29 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void validatePassword (View view) {
+        EditText editText = findViewById(R.id.editText);
+        String password = editText.getText().toString();
+        TextView textView = findViewById(R.id.textView);
+        Validator v = new Validator();
 
+        int passed = v.validate(password);
+
+        switch (passed) {
+            case 1:
+                textView.setText("Very Weak");
+                break;
+            case 2:
+                textView.setText("Weak");
+                break;
+            case 3:
+                textView.setText("Good");
+                break;
+            case 4:
+                textView.setText("Strong");
+                break;
+            case 5:
+                textView.setText("Very Strong");
+                break;
+        }
     }
 }
